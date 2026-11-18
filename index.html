@@ -7,7 +7,140 @@
     <link rel="icon" href="images/paintCross.png" />
     <link rel="stylesheet" href="/CSS/examCentral.css" />
   </head>
+  <style>
+    :root {
+      --blue: #1d4e89;
+      --ink: #12233a;
+      --muted: #4a5d78;
+      --paper: #f4f7fb;
+      --line: #d6e0ee;
+      --gold: #1d4e89;
+    }
 
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "IBM Plex Sans", system-ui, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    h1,
+    h2 {
+      font-family: "Bricolage Grotesque", "IBM Plex Sans", Arial, sans-serif;
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+
+    /* Navigation */
+    nav.top {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 10px 24px;
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav.top a {
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 6px 16px;
+      border-radius: 999px;
+    }
+
+    nav.top a:hover {
+      background: var(--line);
+    }
+
+    nav.top a.this-one {
+      background: var(--blue);
+      color: #fff;
+    }
+
+    /* Page */
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 36px 24px 56px;
+    }
+
+    .welcome h1 {
+      font-size: 2rem;
+      color: var(--blue);
+    }
+
+    .welcome p {
+      margin: 4px 0 24px;
+      color: var(--muted);
+    }
+
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      align-items: start;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .card h2 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .card a,
+    .card {
+      display: block;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 7px 12px;
+      margin-top: 6px;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .card a:first-of-type {
+      margin-top: 0;
+    }
+
+    .card a:hover {
+      border-color: var(--blue);
+      background: var(--paper);
+    }
+
+    .card {
+      color: var(--muted);
+      background: var(--paper);
+    }
+
+    .card small {
+      font-size: 0.8rem;
+      margin-left: 6px;
+    }
+  </style>
   <body>
     <nav class="top" aria-label="Main">
       <a href="index.html" class="this-one" aria-current="page">Home</a>

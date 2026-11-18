@@ -12,6 +12,237 @@
       rel="stylesheet"
     />
   </head>
+  <style>
+    :root {
+      --blue: #1d4e89;
+      --ink: #12233a;
+      --muted: #4a5d78;
+      --paper: #f4f7fb;
+      --line: #d6e0ee;
+      --gold: #1d4e89;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 70px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "IBM Plex Sans", system-ui, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Bricolage Grotesque", "IBM Plex Sans", Arial, sans-serif;
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    /* Navigation */
+    nav.top {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 10px 24px;
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav.top a {
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 6px 16px;
+      border-radius: 999px;
+    }
+
+    nav.top a:hover {
+      background: var(--line);
+    }
+
+    nav.top a.this-one {
+      background: var(--blue);
+      color: #fff;
+    }
+
+    /* Title band */
+    .title-band {
+      /* background: var(--blue); */
+      color: #000000;
+      padding: 48px 24px 0px 24px;
+    }
+
+    .title-band div {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .title-band h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 10px;
+    }
+
+    .title-band p {
+      margin: 0;
+      font-size: 1.15rem;
+      color: #00000059;
+    }
+
+    /* Content */
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+    }
+
+    .contents {
+      padding: 16px 20px;
+      margin-bottom: 8px;
+    }
+
+    .contents strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .contents ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    section {
+      padding-top: 28px;
+      margin-top: 28px;
+      border-top: 1px solid var(--line);
+    }
+
+    section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+
+    section h3 {
+      font-size: 1.15rem;
+      margin: 18px 0 6px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul.plain {
+      margin: 0 0 14px;
+      padding-left: 22px;
+    }
+
+    ul.plain li {
+      margin-bottom: 8px;
+      padding-left: 4px;
+    }
+
+    ul.plain li::marker {
+      color: var(--gold);
+    }
+
+    /* Key facts box */
+    dl.keyfacts {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 8px 20px;
+      margin: 0 0 14px;
+    }
+
+    dl.keyfacts div {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 12px;
+      padding: 9px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    dl.keyfacts div:first-child {
+      border-top: none;
+    }
+
+    dl.keyfacts dt {
+      font-weight: 500;
+    }
+    dl.keyfacts dd {
+      margin: 0;
+    }
+
+    /* Code example */
+    pre {
+      background: #12233a;
+      color: #e6eef8;
+      padding: 16px 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 0 0 14px;
+    }
+
+    code {
+      font-family: Consolas, "Courier New", monospace;
+    }
+
+    p code {
+      background: #e4ebf5;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+
+    figure {
+      margin: 0 0 20px;
+    }
+
+    figure img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    figcaption {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    @media (max-width: 600px) {
+      dl.keyfacts div {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
   <body>
     <nav class="top" aria-label="Main">
       <a href="index.html">Home</a>
