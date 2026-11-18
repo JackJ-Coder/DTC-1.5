@@ -1,0 +1,138 @@
+:root {
+    --blue: #1d4e89;
+    --ink: #0f2421;
+    --muted: #4b625d;
+    --paper: #f3f7f5;
+    --line: #d3e0db;
+    --gold: #e3b24d;
+}
+
+.title {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background-color: rgb(164, 209, 240);
+}
+
+/* a:visited {
+    color: blue;
+} */
+
+/* Navigation */
+nav.top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 10px 24px;
+    border-bottom: 1px solid var(--line);
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Navigation board settings */
+nav.top a {
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 6px 16px;
+    border-radius: 999px;
+}
+
+nav.top a:hover {
+    background: var(--line);
+}
+
+nav.top a.this-one {
+    background: var(--blue);
+    color: #fff;
+}
+
+.marsden {
+    width: 200px;
+    margin-top: -50pxs;
+}
+
+.site-header {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background: #dfe5ec;
+    padding: 12px 24px;
+    z-index: 100;
+}
+
+header {
+    width: 98.7%;
+    margin: 0;
+    background-color: rgba(137, 138, 140, 0.278);
+    margin-left: -10px;
+}
+
+.this-one {
+    color: red;
+    text-decoration: none;
+    padding: 12px 24px;
+}
+
+.causeOfDeath {
+    margin-left: 57px;
+    margin-top: -15px;
+}
+
+.name {
+    margin-top: 210px;
+    margin-left: 210px;
+    font-size: 30px;
+    position: absolute;
+    font-family: system-ui;
+}
+
+.important_dates {
+    font-weight: bold;
+}
+
+.maps {
+    text-decoration: none;
+}
+
+.top {
+    margin-top: -15px;
+}
+
+.indent {
+    margin-left: 15px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.font {
+    font-family: system-ui;
+}
+
+.medium {
+    font-size: medium;
+}
+
+.bottom {
+    margin-bottom: -10px;
+}
+
+.tableOfContents {
+    font-size: 14.5px;
+}
+
+.small {
+    font-size: small;
+}
+

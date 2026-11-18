@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arduino</title>
+    <link rel="stylesheet" href="/CSS/arduino.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=IBM+Plex+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="top" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="christian.html">Christianity</a>
+      <a href="esp32.html">ESP32</a>
+      <a href="arduino.html" class="this-one" aria-current="page">Arduino</a>
+    </nav>
+
+    <div class="title-band">
+      <div>
+        <h1>What is an Arduino?</h1>
+        <p>
+          A small, beginner-friendly circuit board for building electronics
+          projects.
+        </p>
+      </div>
+    </div>
+
+    <main>
+      <div class="contents">
+        <strong>Table of contents</strong>
+        <ul>
+          <li><a href="#what">What it is</a></li>
+          <li><a href="#keyfacts">Key facts</a></li>
+          <li><a href="#how">How does it work?</a></li>
+          <li><a href="#pins">How does it connect to other parts?</a></li>
+          <li><a href="#uses">What is it used for?</a></li>
+          <li><a href="#programming">How do you program it?</a></li>
+          <li><a href="#boards">Popular boards</a></li>
+          <li><a href="#facts">Interesting facts</a></li>
+          <li><a href="#references">References</a></li>
+        </ul>
+      </div>
+
+      <section id="what">
+        <h2>What it is</h2>
+
+        <!-- Add a photo of an Arduino board here. Remove the comment markers and fill in the details:
+      <figure>
+        <img src="arduino.jpg" alt="An Arduino Uno board" width="320">
+        <figcaption>Image source: where you found it, and its licence</figcaption>
+      </figure>
+      -->
+
+        <p>
+          An Arduino is a small circuit board with a microcontroller on it. A
+          microcontroller is a tiny computer on one chip that is built to
+          control things like lights, motors and sensors. You write a short
+          program on your computer, upload it to the board, and the Arduino then
+          runs it over and over.
+        </p>
+        <p>
+          Arduino started in 2005 in Ivrea, Italy, as a cheap and easy tool for
+          design students who had no electronics background. It became one of
+          the most popular ways in the world to learn electronics and
+          programming, because both the boards and the software are simple to
+          use and there are thousands of free tutorials online.
+        </p>
+      </section>
+
+      <section id="keyfacts">
+        <h2>Key facts</h2>
+        <p>
+          These are the details for the most popular board, the Arduino Uno
+          (version R3).
+        </p>
+        <dl class="keyfacts">
+          <div>
+            <dt>Created</dt>
+            <dd>2005, in Ivrea, Italy</dd>
+          </div>
+          <div>
+            <dt>Created by</dt>
+            <dd>Massimo Banzi and a small team of colleagues</dd>
+          </div>
+          <div>
+            <dt>Chip</dt>
+            <dd>ATmega328P microcontroller</dd>
+          </div>
+          <div>
+            <dt>Speed</dt>
+            <dd>16 MHz</dd>
+          </div>
+          <div>
+            <dt>Memory</dt>
+            <dd>2 KB of RAM and 32 KB of flash storage</dd>
+          </div>
+          <div>
+            <dt>Voltage</dt>
+            <dd>5 V, powered through USB</dd>
+          </div>
+          <div>
+            <dt>Pins</dt>
+            <dd>14 digital pins (6 can do PWM) and 6 analog input pins</dd>
+          </div>
+          <div>
+            <dt>Price</dt>
+            <dd>
+              Roughly NZ$30 to NZ$50 for an official Uno, and less for a copy
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="how">
+        <h2>How does it work?</h2>
+        <p>
+          The microcontroller runs one program at a time, line by line. Your
+          program is stored in flash memory, which keeps its contents even when
+          the power is off, and it uses RAM as temporary working space while it
+          runs. The Arduino has no operating system like Windows, so as soon as
+          it is powered on it starts running your program.
+        </p>
+        <p>
+          The rest of the board makes the chip easy to use. It has a USB port
+          for power and for uploading code, a voltage regulator that keeps the
+          power steady, a reset button, a small built-in LED for testing, and
+          rows of sockets along the edges for plugging in wires.
+        </p>
+      </section>
+
+      <section id="pins">
+        <h2>How does it connect to other parts?</h2>
+        <p>
+          The Arduino talks to the outside world through its pins. Each pin can
+          be used as an input, such as reading a button or sensor, or as an
+          output, such as switching on an LED.
+        </p>
+        <ul class="plain">
+          <li><b>Digital pins</b> read or send simple on and off signals</li>
+          <li>
+            <b>Analog input pins</b> read changing values, such as how bright a
+            light is, as a number from 0 to 1023
+          </li>
+          <li>
+            <b>PWM pins</b> (marked with a ~) let you dim an LED or control the
+            speed of a motor
+          </li>
+          <li><b>Power pins</b> provide 5 V and 3.3 V to run small parts</li>
+          <li>
+            <b>Shields</b> are extra boards that plug straight on top and add
+            features such as Wi-Fi, motor control or a screen
+          </li>
+        </ul>
+        <p>
+          Beginners often connect parts using a breadboard, a plastic board with
+          holes that lets you build circuits without any soldering.
+        </p>
+      </section>
+
+      <section id="uses">
+        <h2>What is it used for?</h2>
+        <ul class="plain">
+          <li>
+            <b>Learning:</b> schools use Arduinos to teach electronics and
+            programming
+          </li>
+          <li>
+            <b>Robots:</b> controlling motors, wheels and sensors that detect
+            obstacles
+          </li>
+          <li>
+            <b>Sensors and data loggers:</b> recording temperature, light or
+            soil moisture
+          </li>
+          <li>
+            <b>Lights and displays:</b> LED strips, small screens and signs
+          </li>
+          <li>
+            <b>Home and hobby projects:</b> alarms, automatic plant watering and
+            remote controls
+          </li>
+          <li>
+            <b>Prototypes:</b> engineers use it to test an idea quickly before
+            building the real thing
+          </li>
+        </ul>
+      </section>
+
+      <section id="programming">
+        <h2>How do you program it?</h2>
+        <p>
+          You write your code in the free Arduino IDE on a computer, then upload
+          it to the board with a USB cable. Programs are called
+          <b>sketches</b> and are written in a version of C++ that has been made
+          simple for beginners. There are also thousands of free libraries that
+          add ready made code for common sensors and displays.
+        </p>
+
+        <h3>Example: making an LED blink</h3>
+        <p>
+          This is usually the first program people write. Every sketch has a
+          <code>setup()</code> that runs once when the board starts, and a
+          <code>loop()</code> that then repeats forever.
+        </p>
+        <pre><code>void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);   // the small LED on the board
+}
+
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);   // LED on
+  delay(1000);                       // wait one second
+  digitalWrite(LED_BUILTIN, LOW);    // LED off
+  delay(1000);
+}</code></pre>
+      </section>
+
+      <section id="boards">
+        <h2>Popular boards</h2>
+        <ul class="plain">
+          <li>
+            <b>Arduino Uno:</b> the classic beginner board, and the one most
+            tutorials use
+          </li>
+          <li>
+            <b>Arduino Nano:</b> a much smaller board that fits on a breadboard
+          </li>
+          <li>
+            <b>Arduino Mega:</b> a larger board with many more pins, for big
+            projects
+          </li>
+          <li>
+            <b>Arduino Uno R4:</b> a newer Uno from 2023 with a faster, more
+            powerful chip, and a version with Wi-Fi
+          </li>
+        </ul>
+      </section>
+
+      <section id="facts">
+        <h2>Interesting facts</h2>
+        <ul class="plain">
+          <li>
+            The name comes from a bar in Ivrea where the founders often met.
+          </li>
+          <li>
+            It is open source, which means the designs are shared freely, so
+            many other companies make compatible boards.
+          </li>
+          <li>
+            The classic Uno has no Wi-Fi or Bluetooth, so it needs an extra part
+            to connect to the internet.
+          </li>
+          <li>
+            The Uno uses 5 V, but the ESP32 uses 3.3 V, so connecting the two
+            directly needs care.
+          </li>
+          <li>
+            The Uno has only 2 KB of RAM, so programs have to be small and
+            careful with memory.
+          </li>
+          <li>
+            It is not a full computer and has no operating system, so it can
+            only run one program at a time.
+          </li>
+          <li>Many 3D printers have been built around Arduino Mega boards.</li>
+        </ul>
+      </section>
+
+      <section id="references">
+        <h2>References</h2>
+        <ul class="plain">
+          <li>
+            Arduino. <i>About Arduino</i>.
+            <a href="https://www.arduino.cc">arduino.cc</a>
+          </li>
+          <li>
+            Arduino. <i>Arduino Documentation</i>.
+            <a href="https://docs.arduino.cc">docs.arduino.cc</a>
+          </li>
+          <li>
+            Wikipedia. <i>Arduino</i>.
+            <a href="https://en.wikipedia.org/wiki/Arduino"
+              >en.wikipedia.org/wiki/Arduino</a
+            >
+          </li>
+          <li>
+            Random Nerd Tutorials. <i>Arduino tutorials and projects</i>.
+            <a href="https://randomnerdtutorials.com"
+              >randomnerdtutorials.com</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+body {
+    background-color: aliceblue;
+    user-select: none;
+}
+
+.site-header {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background: #dfe5ec;
+    padding: 12px 24px;
+    z-index: 100;
+}
+
+header {
+    width: 98.7%;
+    margin: 0;
+    background-color: rgba(137, 138, 140, 0.278);
+    margin-left: -10px;
+}
+
+.this-one {
+    color: red;
+    text-decoration: none;
+    padding: 12px 24px;
+}
+
+.down {
+    margin-bottom: -14px;
+}
+
+.indent {
+    margin-left: 14px;
+}
+
+.title {
+    margin-bottom: -14px;
+}
+
+.features {
+    margin-bottom: -14px;
+}
+
+.used_for {
+    margin-bottom: -14px;
+}
